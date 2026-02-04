@@ -21,10 +21,10 @@ A Streamlit-based application that leverages the power of Llama 3 via Groq to ge
 
 ```mermaid
 graph LR
-    A[User Input] --> B[Few-shot Prompt Builder]
-    B --> C[Llama-3 (Groq)]
-    C --> D[Generated Post]
-    D --> E[Streamlit UI]
+    A["User Input"] --> B["Few-shot Prompt Builder"]
+    B --> C["Llama-3 (Groq)"]
+    C --> D["Generated Post"]
+    D --> E["Streamlit UI"]
 ```
 
 > **User Input** → **Few-shot Prompt Builder** → **Llama-3 (Groq)** → **Generated Post** → **Streamlit UI**
