@@ -27,7 +27,7 @@ graph LR
     D --> E["Streamlit UI"]
 ```
 
-> **User Input** → **Few-shot Prompt Builder** → **Llama-3 (Groq)** → **Generated Post** → **Streamlit UI**
+
 
 ## 🛠️ Tech Stack
 
