@@ -20,12 +20,21 @@ A Streamlit-based application that leverages the power of Llama 3 via Groq to ge
 ## 🧠 Architecture
 
 ```mermaid
-graph LR
-    A["User Input"] --> B["Few-shot Prompt Builder"]
-    B --> C["Llama-3 (Groq)"]
-    C --> D["Generated Post"]
-    D --> E["Streamlit UI"]
+sequenceDiagram
+    participant User
+    participant Streamlit UI
+    participant Logic (Few-Shot/Prompt)
+    participant Llama-3 (Groq)
+
+    User->>Streamlit UI: Select Topic, Length, Language
+    Streamlit UI->>Logic (Few-Shot/Prompt): Request Prompt construction
+    Logic (Few-Shot/Prompt)->>Logic (Few-Shot/Prompt): Fetch Similar Examples
+    Logic (Few-Shot/Prompt)->>Llama-3 (Groq): Send Context + Prompt
+    Llama-3 (Groq)-->>Streamlit UI: Return Generated Post
+    Streamlit UI-->>User: Display Content
 ```
+
+> **User Input** → **Few-shot Prompt Builder** → **Llama-3 (Groq)** → **Generated Post** → **Streamlit UI**
 
 
 
