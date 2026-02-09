@@ -1,4 +1,4 @@
-# GenAI LinkedIn Post Generator using Llama-3, LangChain & Groq
+# LinkedIn Post Generator using Llama-3, LangChain & Groq
 
 A Streamlit-based application that leverages the power of Llama 3 via Groq to generate engaging LinkedIn posts. This tool uses few-shot learning to tailor posts based on selected topics, length, and language.
 
